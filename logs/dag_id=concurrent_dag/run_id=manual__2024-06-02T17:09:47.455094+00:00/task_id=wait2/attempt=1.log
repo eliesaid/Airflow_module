@@ -1,0 +1,16 @@
+[2024-06-02T17:09:52.933+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: concurrent_dag.wait2 manual__2024-06-02T17:09:47.455094+00:00 [queued]>
+[2024-06-02T17:09:52.956+0000] {taskinstance.py:1956} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: concurrent_dag.wait2 manual__2024-06-02T17:09:47.455094+00:00 [queued]>
+[2024-06-02T17:09:52.957+0000] {taskinstance.py:2170} INFO - Starting attempt 1 of 1
+[2024-06-02T17:09:53.011+0000] {taskinstance.py:2191} INFO - Executing <Task(PythonOperator): wait2> on 2024-06-02 17:09:47.455094+00:00
+[2024-06-02T17:09:53.040+0000] {standard_task_runner.py:60} INFO - Started process 3965 to run task
+[2024-06-02T17:09:53.057+0000] {standard_task_runner.py:87} INFO - Running: ['***', 'tasks', 'run', 'concurrent_dag', 'wait2', 'manual__2024-06-02T17:09:47.455094+00:00', '--job-id', '308', '--raw', '--subdir', 'DAGS_FOLDER/pool_dag.py', '--cfg-path', '/tmp/tmplt4j7eup']
+[2024-06-02T17:09:53.060+0000] {standard_task_runner.py:88} INFO - Job 308: Subtask wait2
+[2024-06-02T17:09:53.094+0000] {warnings.py:109} WARNING - /home/***/.local/lib/python3.8/site-packages/***/settings.py:194: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  SQL_ALCHEMY_CONN = conf.get("database", "SQL_ALCHEMY_CONN")
+
+[2024-06-02T17:09:53.201+0000] {task_command.py:423} INFO - Running <TaskInstance: concurrent_dag.wait2 manual__2024-06-02T17:09:47.455094+00:00 [running]> on host ac6c883b25f7
+[2024-06-02T17:09:53.430+0000] {taskinstance.py:2480} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='concurrent_dag' AIRFLOW_CTX_TASK_ID='wait2' AIRFLOW_CTX_EXECUTION_DATE='2024-06-02T17:09:47.455094+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-06-02T17:09:47.455094+00:00'
+[2024-06-02T17:10:53.490+0000] {python.py:201} INFO - Done. Returned value was: None
+[2024-06-02T17:10:53.510+0000] {taskinstance.py:1138} INFO - Marking task as SUCCESS. dag_id=concurrent_dag, task_id=wait2, execution_date=20240602T170947, start_date=20240602T170952, end_date=20240602T171053
+[2024-06-02T17:10:53.578+0000] {local_task_job_runner.py:234} INFO - Task exited with return code 0
+[2024-06-02T17:10:53.647+0000] {taskinstance.py:3280} INFO - 0 downstream tasks scheduled from follow-on schedule check
